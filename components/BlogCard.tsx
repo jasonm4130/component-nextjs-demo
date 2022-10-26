@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Post } from "../types";
 import BlurImage from "./BlurImage";
 import Date from "./Date";
+import SanitizeHtml from "./SanitizeHtml";
 
 interface BlogCardProps {
   data: Post;
@@ -29,7 +30,7 @@ export default function BlogCard({ data }: BlogCardProps) {
           <div className="py-8 px-5 h-36 border-t border-gray-200">
             <h3 className="font-cal text-xl tracking-wide">{data.title}</h3>
             <p className="text-md italic text-gray-600 my-2 truncate">
-              {data.summary}
+              <SanitizeHtml html={data.summary} />
             </p>
           </div>
         </div>

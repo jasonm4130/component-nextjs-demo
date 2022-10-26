@@ -1,6 +1,7 @@
 import BlurImage from "./BlurImage";
 import Date from "./Date";
 import Link from "next/link";
+import SanitizeHtml from "./SanitizeHtml";
 
 export default function FeaturedPost({
   data,
@@ -38,7 +39,7 @@ export default function FeaturedPost({
                 {data.title}
               </h2>
               <p className="text-base md:text-lg w-full lg:w-2/3">
-                {data.summary}
+                <SanitizeHtml html={data.summary} />
               </p>
             </div>
           </a>
