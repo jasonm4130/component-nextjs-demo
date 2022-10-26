@@ -28,7 +28,7 @@ export default function Header() {
       <div className="flex justify-center items-center space-x-5 h-full max-w-screen-xl mx-auto px-10 sm:px-20">
         <Link href="/" passHref>
           <a className="flex justify-center items-center">
-            {meta?.logo && (
+            {meta?.logo ? (
               <div className="h-8 w-20 inline-block overflow-hidden align-middle">
                 <Image
                   alt={meta?.title}
@@ -37,10 +37,11 @@ export default function Header() {
                   width={1200}
                 />
               </div>
+            ) : (
+              <span className="inline-block ml-3 font-medium truncate">
+                {meta?.title}
+              </span>
             )}
-            <span className="inline-block ml-3 font-medium truncate">
-              {meta?.title}
-            </span>
           </a>
         </Link>
       </div>
