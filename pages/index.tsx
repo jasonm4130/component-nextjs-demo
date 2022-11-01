@@ -58,7 +58,7 @@ const Home: NextPage<Props> = (props) => {
 export async function getStaticProps() {
   // Get the posts from the component service
   const data = await api<Response>(
-    "https://render.develop.components.dev.dx.squiz.cloud/r/sync/sync/search-news-listing/0.0.4/json?query=sustainability"
+    "https://render.develop.components.dev.dx.squiz.cloud/r/sync/sync/search-news-listing/0.0.4/json?scope=euronews&query=environment"
   ).catch((error) => {
     /* show error message */
     console.log("error");
