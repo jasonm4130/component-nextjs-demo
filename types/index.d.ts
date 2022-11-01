@@ -13,4 +13,5 @@ export type Post = {
   summary: string;
   url: string;
   category: string;
+  author: string;
 };
