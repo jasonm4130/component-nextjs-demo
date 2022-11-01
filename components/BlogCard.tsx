@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Post } from "../types";
 import BlurImage from "./BlurImage";
-import Date from "./Date";
 import SanitizeHtml from "./SanitizeHtml";
 
 interface BlogCardProps {
