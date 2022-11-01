@@ -14,6 +14,7 @@ export default function FeaturedPost({
     url: string;
   };
 }) {
+  var imageURL = "" + data.imageURL[0];
   return (
     <div className="w-full mb-20">
       <div className="w-full max-w-screen-xl lg:w-5/6 mx-auto md:mb-28">
@@ -26,7 +27,7 @@ export default function FeaturedPost({
                   className="group-hover:scale-105 group-hover:duration-300"
                   layout="fill"
                   objectFit="cover"
-                  src={data.imageURL}
+                  src={imageURL}
                 />
               ) : (
                 <div className="absolute flex items-center justify-center w-full h-full bg-gray-100 text-gray-500 text-4xl select-none">
