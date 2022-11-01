@@ -58,12 +58,15 @@ const Home: NextPage<Props> = (props) => {
 export async function getStaticProps() {
   // Get the posts from the component service
   const data = await api<Response>(
-    "https://render.develop.components.dev.dx.squiz.cloud/r/sync/sync/search-news-listing/0.0.2/json"
+    "https://render.develop.components.dev.dx.squiz.cloud/r/sync/sync/search-news-listing/0.0.4/json?query=sustainability"
   ).catch((error) => {
     /* show error message */
+    console.log("error");
+    console.log(error);
   });
 
-  const posts = data?.results || [];
+  console.log(data);
+  const posts = data || [];
 
   return {
     props: {
